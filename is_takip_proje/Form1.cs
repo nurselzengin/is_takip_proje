@@ -22,8 +22,6 @@ namespace is_takip_proje
             Formlar.FrmDepartmanlar frm = new Formlar.FrmDepartmanlar();
             frm.MdiParent = this;
             frm.Show();
-
-
         }
     }
 }
