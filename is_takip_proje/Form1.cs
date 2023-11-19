@@ -1,4 +1,5 @@
-﻿using System;
+﻿using is_takip_proje.Formlar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +13,21 @@ namespace is_takip_proje
 {
     public partial class Form1 : Form
     {
+        private Formlar.FrmDepartmanlar frmDepartmanlar;
+
         public Form1()
         {
             InitializeComponent();
+            frmDepartmanlar = new Formlar.FrmDepartmanlar();
         }
 
         private void BtnDepartmanListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Formlar.FrmDepartmanlar frm = new Formlar.FrmDepartmanlar();
-            frm.MdiParent = this;
-            frm.Show();
+            if (frmDepartmanlar != null && !frmDepartmanlar.Visible)
+            {
+                frmDepartmanlar.MdiParent = this;
+                frmDepartmanlar.Show();
+            }
         }
     }
 }
