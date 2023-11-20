@@ -262,7 +262,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Dbis_TakipEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Dbis_TakipEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" />
           <EntitySet Name="TblDepartmanlar" EntityType="Self.TblDepartmanlar" />
           <EntitySet Name="TblFirmalar" EntityType="Self.TblFirmalar" />
@@ -291,7 +291,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Dbis_TakipEntities">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Dbis_TakipEntities1">
           <EntitySetMapping Name="TblAdmin">
             <EntityTypeMapping TypeName="Model.TblAdmin">
               <MappingFragment StoreEntitySet="TblAdmin">
