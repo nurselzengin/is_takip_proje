@@ -62,5 +62,21 @@ namespace is_takip_proje.Formlar
             XtraMessageBox.Show("Departman silme işlemi başarılı bir şekilde gerçekleştirildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Listele();
         }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            TxtID.Text = gridView1.GetFocusedRowCellValue("ID").ToString();
+            TxtAd.Text = gridView1.GetFocusedRowCellValue("Ad").ToString();
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            int x = int.Parse(TxtID.Text);
+            var deger = db.TblDepartmanlar.Find(x);
+            deger.Ad = TxtAd.Text;
+            db.SaveChanges();
+            XtraMessageBox.Show("Departman güncelleme işlemi başarılı bir şekilde gerçekleştirildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            Listele();
+        }
     }
 }
