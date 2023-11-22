@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using is_takip_proje.Entity;
 
 namespace is_takip_proje.Formlar
@@ -44,6 +45,20 @@ namespace is_takip_proje.Formlar
             lookUpEdit1.Properties.ValueMember = "ID";
             lookUpEdit1.Properties.DisplayMember = "Ad";
             lookUpEdit1.Properties.DataSource = departmanlar;
+        }
+
+        private void BtnEkle_Click(object sender, EventArgs e)
+        {
+            TblPersonel t = new TblPersonel();
+            t.Ad = TxtAd.Text;
+            t.Soyad = TxtSoyad.Text;
+            t.Mail = TxtMail.Text;
+            t.Gorsel = TxtGorsel.Text;
+            t.Departman = int.Parse(lookUpEdit1.EditValue.ToString());
+            db.TblPersonel.Add(t);
+            db.SaveChanges();
+            XtraMessageBox.Show("Personel ekleme işlemi başarıyla gerçekleştirildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Personeller();
         }
     }
 }
