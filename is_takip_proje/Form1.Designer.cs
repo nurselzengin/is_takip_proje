@@ -125,7 +125,7 @@
             this.ribbonPage5,
             this.ribbonPage6,
             this.ribbonPage7});
-            this.ribbonControl1.Size = new System.Drawing.Size(736, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1015, 150);
             // 
             // barButtonItem1
             // 
@@ -469,7 +469,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 449);
+            this.ClientSize = new System.Drawing.Size(1015, 513);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);

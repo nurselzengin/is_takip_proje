@@ -18,7 +18,7 @@ namespace is_takip_proje.Formlar
             InitializeComponent();
         }
         Dbis_TakipEntities1 db = new Dbis_TakipEntities1();
-        private void FrmPersoneller_Load(object sender, EventArgs e)
+        void Personeller() 
         {
             var degerler = from x in db.TblPersonel
                            select new
@@ -30,6 +30,20 @@ namespace is_takip_proje.Formlar
                                x.Departman
                            };
             gridControl1.DataSource = degerler.ToList();
+        }
+        private void FrmPersoneller_Load(object sender, EventArgs e)
+        {
+            Personeller();
+
+            var departmanlar = (from x in db.TblDepartmanlar
+                                select new
+                                {
+                                    x.ID,
+                                    x.Ad
+                                }).ToList();
+            lookUpEdit1.Properties.ValueMember = "ID";
+            lookUpEdit1.Properties.DisplayMember = "Ad";
+            lookUpEdit1.Properties.DataSource = departmanlar;
         }
     }
 }
