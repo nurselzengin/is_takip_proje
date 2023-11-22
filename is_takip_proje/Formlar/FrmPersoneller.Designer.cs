@@ -1,6 +1,6 @@
 ﻿namespace is_takip_proje.Formlar
 {
-    partial class FrmDepartmanlar
+    partial class FrmPersoneller
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDepartmanlar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPersoneller));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
@@ -58,11 +58,11 @@
             this.groupControl1.Controls.Add(this.BtnListele);
             this.groupControl1.Controls.Add(this.TxtID);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(471, 0);
+            this.groupControl1.Location = new System.Drawing.Point(472, -1);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(254, 260);
-            this.groupControl1.TabIndex = 5;
+            this.groupControl1.TabIndex = 7;
             // 
             // BtnGuncelle
             // 
@@ -73,7 +73,6 @@
             this.BtnGuncelle.Size = new System.Drawing.Size(121, 33);
             this.BtnGuncelle.TabIndex = 7;
             this.BtnGuncelle.Text = "Güncelle";
-            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnSil
             // 
@@ -84,7 +83,6 @@
             this.BtnSil.Size = new System.Drawing.Size(121, 33);
             this.BtnSil.TabIndex = 6;
             this.BtnSil.Text = "Sil";
-            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnEkle
             // 
@@ -95,7 +93,6 @@
             this.BtnEkle.Size = new System.Drawing.Size(121, 33);
             this.BtnEkle.TabIndex = 5;
             this.BtnEkle.Text = "Ekle";
-            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // TxtAd
             // 
@@ -123,7 +120,6 @@
             this.BtnListele.Size = new System.Drawing.Size(121, 33);
             this.BtnListele.TabIndex = 2;
             this.BtnListele.Text = "Listele";
-            this.BtnListele.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // TxtID
             // 
@@ -145,12 +141,12 @@
             // gridControl1
             // 
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl1.Location = new System.Drawing.Point(-3, 0);
+            this.gridControl1.Location = new System.Drawing.Point(-2, -1);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(474, 260);
-            this.gridControl1.TabIndex = 6;
+            this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -160,19 +156,18 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsEditForm.PopupEditFormWidth = 600;
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // FrmDepartmanlar
+            // FrmPersoneller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 258);
-            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmDepartmanlar";
-            this.Text = "Departmanlar";
-            this.Load += new System.EventHandler(this.FrmDepartmanlar_Load);
+            this.Controls.Add(this.gridControl1);
+            this.Name = "FrmPersoneller";
+            this.Text = "Personeller";
+            this.Load += new System.EventHandler(this.FrmPersoneller_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -185,15 +180,16 @@
         }
 
         #endregion
+
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
+        private DevExpress.XtraEditors.SimpleButton BtnSil;
+        private DevExpress.XtraEditors.SimpleButton BtnEkle;
+        private DevExpress.XtraEditors.TextEdit TxtAd;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton BtnListele;
         private DevExpress.XtraEditors.TextEdit TxtID;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit TxtAd;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.SimpleButton BtnEkle;
-        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
-        private DevExpress.XtraEditors.SimpleButton BtnSil;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
