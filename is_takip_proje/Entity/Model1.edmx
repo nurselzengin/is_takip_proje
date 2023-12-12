@@ -4,15 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DbisTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DbisTakip.dbo.TblAdmin' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="TblAdmin">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="int" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="10" />
           <Property Name="Sifre" Type="nvarchar" MaxLength="10" />
-        </EntityType>
+        </EntityType>-->
         <EntityType Name="TblDepartmanlar">
           <Key>
             <PropertyRef Name="ID" />
@@ -29,8 +28,7 @@
           <Property Name="Yetkili" Type="nvarchar" MaxLength="30" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
-          <Property Name="Sektor" Type="nvarchar" MaxLength="30" />
-          <Property Name="il" Type="nvarchar" MaxLength="20" />
+          <Property Name="il" Type="nvarchar" MaxLength="30" />
           <Property Name="ilce" Type="nvarchar" MaxLength="30" />
           <Property Name="Adres" Type="nvarchar" MaxLength="200" />
         </EntityType>
@@ -115,8 +113,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ModelStoreContainer">
-          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+        <EntityContainer Name="DbisTakipModelStoreContainer">
           <EntitySet Name="TblDepartmanlar" EntityType="Self.TblDepartmanlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblFirmalar" EntityType="Self.TblFirmalar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblGorevDetaylar" EntityType="Self.TblGorevDetaylar" Schema="dbo" store:Type="Tables" />
@@ -143,15 +140,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="TblAdmin">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Kullanici" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Sifre" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-        </EntityType>
+      <Schema Namespace="DbisTakipModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="TblDepartmanlar">
           <Key>
             <PropertyRef Name="ID" />
@@ -169,8 +158,7 @@
           <Property Name="Yetkili" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sektor" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="il" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="il" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="ilce" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
@@ -262,8 +250,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Dbis_TakipEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" />
+        <EntityContainer Name="DbisTakipEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblDepartmanlar" EntityType="Self.TblDepartmanlar" />
           <EntitySet Name="TblFirmalar" EntityType="Self.TblFirmalar" />
           <EntitySet Name="TblGorevDetaylar" EntityType="Self.TblGorevDetaylar" />
@@ -291,18 +278,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Dbis_TakipEntities1">
-          <EntitySetMapping Name="TblAdmin">
-            <EntityTypeMapping TypeName="Model.TblAdmin">
-              <MappingFragment StoreEntitySet="TblAdmin">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
-                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+        <EntityContainerMapping StorageEntityContainer="DbisTakipModelStoreContainer" CdmEntityContainer="DbisTakipEntities">
           <EntitySetMapping Name="TblDepartmanlar">
-            <EntityTypeMapping TypeName="Model.TblDepartmanlar">
+            <EntityTypeMapping TypeName="DbisTakipModel.TblDepartmanlar">
               <MappingFragment StoreEntitySet="TblDepartmanlar">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
@@ -310,14 +288,13 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblFirmalar">
-            <EntityTypeMapping TypeName="Model.TblFirmalar">
+            <EntityTypeMapping TypeName="DbisTakipModel.TblFirmalar">
               <MappingFragment StoreEntitySet="TblFirmalar">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="Yetkili" ColumnName="Yetkili" />
                 <ScalarProperty Name="Telefon" ColumnName="Telefon" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
-                <ScalarProperty Name="Sektor" ColumnName="Sektor" />
                 <ScalarProperty Name="il" ColumnName="il" />
                 <ScalarProperty Name="ilce" ColumnName="ilce" />
                 <ScalarProperty Name="Adres" ColumnName="Adres" />
@@ -325,7 +302,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblGorevDetaylar">
-            <EntityTypeMapping TypeName="Model.TblGorevDetaylar">
+            <EntityTypeMapping TypeName="DbisTakipModel.TblGorevDetaylar">
               <MappingFragment StoreEntitySet="TblGorevDetaylar">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Gorev" ColumnName="Gorev" />
@@ -336,7 +313,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblGorevler">
-            <EntityTypeMapping TypeName="Model.TblGorevler">
+            <EntityTypeMapping TypeName="DbisTakipModel.TblGorevler">
               <MappingFragment StoreEntitySet="TblGorevler">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="GorevVeren" ColumnName="GorevVeren" />
@@ -348,7 +325,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblPersonel">
-            <EntityTypeMapping TypeName="Model.TblPersonel">
+            <EntityTypeMapping TypeName="DbisTakipModel.TblPersonel">
               <MappingFragment StoreEntitySet="TblPersonel">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />

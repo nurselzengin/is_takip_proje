@@ -18,18 +18,17 @@ namespace is_takip_proje.Formlar
         {
             InitializeComponent();
         }
-
-        Dbis_TakipEntities1 db = new Dbis_TakipEntities1();
-
+        DbisTakipEntities db = new DbisTakipEntities();
         void Listele() 
         {
+            
             var degerler = (from x in db.TblDepartmanlar
-                           select new 
-                           { 
+                            select new
+                            {
                                 x.ID,
                                 x.Ad
-                           }).ToList();
-            gridControl1.DataSource = degerler;
+                            }).ToList();
+            gridControl1.DataSource = degerler ;
         }
 
         private void FrmDepartmanlar_Load(object sender, EventArgs e)
@@ -48,9 +47,8 @@ namespace is_takip_proje.Formlar
             t.Ad = TxtAd.Text;
             db.TblDepartmanlar.Add(t);
             db.SaveChanges();
-            XtraMessageBox.Show("Departman başarılı bir şekilde sisteme kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Departman başarılı bir şekilde kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Listele();
-
         }
 
         private void BtnSil_Click(object sender, EventArgs e)
@@ -59,8 +57,9 @@ namespace is_takip_proje.Formlar
             var deger = db.TblDepartmanlar.Find(x);
             db.TblDepartmanlar.Remove(deger);
             db.SaveChanges();
-            XtraMessageBox.Show("Departman silme işlemi başarılı bir şekilde gerçekleştirildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("Departman başarılı bir şekilde silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Listele();
+
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -71,12 +70,7 @@ namespace is_takip_proje.Formlar
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            int x = int.Parse(TxtID.Text);
-            var deger = db.TblDepartmanlar.Find(x);
-            deger.Ad = TxtAd.Text;
-            db.SaveChanges();
-            XtraMessageBox.Show("Departman güncelleme işlemi başarılı bir şekilde gerçekleştirildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            Listele();
+            
         }
     }
 }

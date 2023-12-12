@@ -13,10 +13,10 @@ namespace is_takip_proje.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Dbis_TakipEntities1 : DbContext
+    public partial class DbisTakipEntities : DbContext
     {
-        public Dbis_TakipEntities1()
-            : base("name=Dbis_TakipEntities1")
+        public DbisTakipEntities()
+            : base("name=DbisTakipEntities")
         {
         }
     
@@ -25,7 +25,6 @@ namespace is_takip_proje.Entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<TblAdmin> TblAdmin { get; set; }
         public virtual DbSet<TblDepartmanlar> TblDepartmanlar { get; set; }
         public virtual DbSet<TblFirmalar> TblFirmalar { get; set; }
         public virtual DbSet<TblGorevDetaylar> TblGorevDetaylar { get; set; }
