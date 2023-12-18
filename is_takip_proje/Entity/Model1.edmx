@@ -4,14 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbisTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'DbisTakip.dbo.TblAdmin' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="TblAdmin">
-          <Property Name="ID" Type="int" />
-          <Property Name="Kullanici" Type="nvarchar" MaxLength="10" />
-          <Property Name="Sifre" Type="nvarchar" MaxLength="10" />
-        </EntityType>-->
+    <Schema Namespace="DbisTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TblDepartmanlar">
           <Key>
             <PropertyRef Name="ID" />
@@ -64,6 +57,7 @@ warning 6013: The table/view 'DbisTakip.dbo.TblAdmin' does not have a primary ke
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
           <Property Name="Gorsel" Type="nvarchar" MaxLength="100" />
           <Property Name="Departman" Type="int" />
+          <Property Name="Durum" Type="bit" />
         </EntityType>
         <Association Name="FK_TblGorevDetaylar_TblGorevler">
           <End Role="TblGorevler" Type="Self.TblGorevler" Multiplicity="0..1" />
@@ -136,8 +130,7 @@ warning 6013: The table/view 'DbisTakip.dbo.TblAdmin' does not have a primary ke
             <End Role="TblPersonel" EntitySet="TblPersonel" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbisTakipModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -201,6 +194,7 @@ warning 6013: The table/view 'DbisTakip.dbo.TblAdmin' does not have a primary ke
           <NavigationProperty Name="TblDepartmanlar" Relationship="Self.FK_TblPersonel_TblDepartmanlar" FromRole="TblPersonel" ToRole="TblDepartmanlar" />
           <NavigationProperty Name="TblGorevler" Relationship="Self.FK_TblGorevler_TblPersonel" FromRole="TblPersonel" ToRole="TblGorevler" />
           <NavigationProperty Name="TblGorevler1" Relationship="Self.FK_TblGorevler_TblPersonel1" FromRole="TblPersonel" ToRole="TblGorevler" />
+          <Property Name="Durum" Type="Boolean" />
         </EntityType>
         <Association Name="FK_TblPersonel_TblDepartmanlar">
           <End Role="TblDepartmanlar" Type="Self.TblDepartmanlar" Multiplicity="0..1" />
@@ -327,6 +321,7 @@ warning 6013: The table/view 'DbisTakip.dbo.TblAdmin' does not have a primary ke
           <EntitySetMapping Name="TblPersonel">
             <EntityTypeMapping TypeName="DbisTakipModel.TblPersonel">
               <MappingFragment StoreEntitySet="TblPersonel">
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="Soyad" ColumnName="Soyad" />

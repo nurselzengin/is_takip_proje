@@ -78,184 +78,185 @@
             this.groupControl1.Controls.Add(this.BtnListele);
             this.groupControl1.Controls.Add(this.TxtID);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(740, -1);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl1.Location = new System.Drawing.Point(555, -1);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(432, 458);
+            this.groupControl1.Size = new System.Drawing.Size(324, 372);
             this.groupControl1.TabIndex = 7;
             // 
             // lookUpEdit1
             // 
             this.lookUpEdit1.EditValue = "";
-            this.lookUpEdit1.Location = new System.Drawing.Point(143, 187);
-            this.lookUpEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lookUpEdit1.Location = new System.Drawing.Point(107, 152);
             this.lookUpEdit1.Name = "lookUpEdit1";
             this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(225, 22);
+            this.lookUpEdit1.Size = new System.Drawing.Size(169, 20);
             this.lookUpEdit1.TabIndex = 15;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(48, 191);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.labelControl6.Location = new System.Drawing.Point(36, 155);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(68, 16);
+            this.labelControl6.Size = new System.Drawing.Size(57, 13);
             this.labelControl6.TabIndex = 14;
             this.labelControl6.Text = "Departman:";
             // 
             // TxtGorsel
             // 
-            this.TxtGorsel.Location = new System.Drawing.Point(143, 155);
-            this.TxtGorsel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtGorsel.Location = new System.Drawing.Point(107, 126);
+            this.TxtGorsel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtGorsel.Name = "TxtGorsel";
-            this.TxtGorsel.Size = new System.Drawing.Size(225, 22);
+            this.TxtGorsel.Size = new System.Drawing.Size(169, 20);
             this.TxtGorsel.TabIndex = 13;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(79, 159);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.labelControl5.Location = new System.Drawing.Point(59, 129);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(41, 16);
+            this.labelControl5.Size = new System.Drawing.Size(34, 13);
             this.labelControl5.TabIndex = 12;
             this.labelControl5.Text = "Görsel:";
             // 
             // TxtMail
             // 
-            this.TxtMail.Location = new System.Drawing.Point(143, 126);
-            this.TxtMail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtMail.Location = new System.Drawing.Point(107, 102);
+            this.TxtMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtMail.Name = "TxtMail";
-            this.TxtMail.Size = new System.Drawing.Size(225, 22);
+            this.TxtMail.Size = new System.Drawing.Size(169, 20);
             this.TxtMail.TabIndex = 11;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(95, 129);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.labelControl4.Location = new System.Drawing.Point(71, 105);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(28, 16);
+            this.labelControl4.Size = new System.Drawing.Size(22, 13);
             this.labelControl4.TabIndex = 10;
             this.labelControl4.Text = "Mail:";
             // 
             // TxtSoyad
             // 
-            this.TxtSoyad.Location = new System.Drawing.Point(143, 96);
-            this.TxtSoyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtSoyad.Location = new System.Drawing.Point(107, 78);
+            this.TxtSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.Size = new System.Drawing.Size(225, 22);
+            this.TxtSoyad.Size = new System.Drawing.Size(169, 20);
             this.TxtSoyad.TabIndex = 9;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(81, 100);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.labelControl3.Location = new System.Drawing.Point(61, 81);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(38, 16);
+            this.labelControl3.Size = new System.Drawing.Size(32, 13);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Soyadı";
             // 
             // BtnGuncelle
             // 
             this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(169, 368);
-            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnGuncelle.Location = new System.Drawing.Point(127, 299);
+            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(161, 41);
+            this.BtnGuncelle.Size = new System.Drawing.Size(121, 33);
             this.BtnGuncelle.TabIndex = 7;
             this.BtnGuncelle.Text = "Güncelle";
             // 
             // BtnSil
             // 
             this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
-            this.BtnSil.Location = new System.Drawing.Point(169, 321);
-            this.BtnSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnSil.Location = new System.Drawing.Point(127, 261);
+            this.BtnSil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(161, 41);
+            this.BtnSil.Size = new System.Drawing.Size(121, 33);
             this.BtnSil.TabIndex = 6;
             this.BtnSil.Text = "Sil";
             // 
             // BtnEkle
             // 
             this.BtnEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnEkle.ImageOptions.Image")));
-            this.BtnEkle.Location = new System.Drawing.Point(169, 274);
-            this.BtnEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnEkle.Location = new System.Drawing.Point(127, 223);
+            this.BtnEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEkle.Name = "BtnEkle";
-            this.BtnEkle.Size = new System.Drawing.Size(161, 41);
+            this.BtnEkle.Size = new System.Drawing.Size(121, 33);
             this.BtnEkle.TabIndex = 5;
             this.BtnEkle.Text = "Ekle";
             this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // TxtAd
             // 
-            this.TxtAd.Location = new System.Drawing.Point(143, 66);
-            this.TxtAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtAd.Location = new System.Drawing.Point(107, 54);
+            this.TxtAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(225, 22);
+            this.TxtAd.Size = new System.Drawing.Size(169, 20);
             this.TxtAd.TabIndex = 4;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(99, 70);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.labelControl2.Location = new System.Drawing.Point(74, 57);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(23, 16);
+            this.labelControl2.Size = new System.Drawing.Size(19, 13);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "Adı:";
             // 
             // BtnListele
             // 
             this.BtnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnListele.ImageOptions.Image")));
-            this.BtnListele.Location = new System.Drawing.Point(169, 226);
-            this.BtnListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnListele.Location = new System.Drawing.Point(127, 184);
+            this.BtnListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnListele.Name = "BtnListele";
-            this.BtnListele.Size = new System.Drawing.Size(161, 41);
+            this.BtnListele.Size = new System.Drawing.Size(121, 33);
             this.BtnListele.TabIndex = 2;
             this.BtnListele.Text = "Listele";
+            this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
             // TxtID
             // 
-            this.TxtID.Location = new System.Drawing.Point(143, 37);
-            this.TxtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtID.Location = new System.Drawing.Point(107, 30);
+            this.TxtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtID.Name = "TxtID";
-            this.TxtID.Size = new System.Drawing.Size(225, 22);
+            this.TxtID.Size = new System.Drawing.Size(169, 20);
             this.TxtID.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(45, 41);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.labelControl1.Location = new System.Drawing.Point(34, 33);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(70, 16);
+            this.labelControl1.Size = new System.Drawing.Size(59, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Personel ID:";
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gridControl1.Location = new System.Drawing.Point(-3, -1);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Location = new System.Drawing.Point(-2, -1);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(737, 458);
+            this.gridControl1.Size = new System.Drawing.Size(553, 372);
             this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsEditForm.PopupEditFormWidth = 600;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // FrmPersoneller
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 463);
+            this.ClientSize = new System.Drawing.Size(874, 376);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPersoneller";
             this.Text = "Personeller";
             this.Load += new System.EventHandler(this.FrmPersoneller_Load);

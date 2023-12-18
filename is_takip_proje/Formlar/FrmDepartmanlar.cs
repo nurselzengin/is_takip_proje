@@ -70,7 +70,12 @@ namespace is_takip_proje.Formlar
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            
+            int x = int.Parse(TxtID.Text);
+            var deger = db.TblDepartmanlar.Find(x);
+            deger.Ad = TxtAd.Text;
+            db.SaveChanges();
+            XtraMessageBox.Show("Departman başarılı bir şekilde güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Listele();
         }
     }
 }
