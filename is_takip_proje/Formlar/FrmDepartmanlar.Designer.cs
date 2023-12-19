@@ -61,7 +61,7 @@
             this.groupControl1.Location = new System.Drawing.Point(471, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(254, 260);
+            this.groupControl1.Size = new System.Drawing.Size(254, 703);
             this.groupControl1.TabIndex = 5;
             // 
             // BtnGuncelle
@@ -149,7 +149,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(474, 260);
+            this.gridControl1.Size = new System.Drawing.Size(474, 703);
             this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 258);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Margin = new System.Windows.Forms.Padding(2);

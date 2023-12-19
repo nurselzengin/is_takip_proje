@@ -38,7 +38,7 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnPersonelListesi = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnPersonelIstatistik = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
@@ -94,7 +94,7 @@
             this.barButtonItem5,
             this.BtnPersonelListesi,
             this.barButtonItem7,
-            this.barButtonItem8,
+            this.BtnPersonelIstatistik,
             this.barButtonItem9,
             this.barButtonItem10,
             this.barButtonItem11,
@@ -125,7 +125,7 @@
             this.ribbonPage5,
             this.ribbonPage6,
             this.ribbonPage7});
-            this.ribbonControl1.Size = new System.Drawing.Size(1015, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1904, 150);
             // 
             // barButtonItem1
             // 
@@ -185,13 +185,14 @@
             this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
             this.barButtonItem7.Name = "barButtonItem7";
             // 
-            // barButtonItem8
+            // BtnPersonelIstatistik
             // 
-            this.barButtonItem8.Caption = "Personel İstatistikleri";
-            this.barButtonItem8.Id = 8;
-            this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
-            this.barButtonItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
-            this.barButtonItem8.Name = "barButtonItem8";
+            this.BtnPersonelIstatistik.Caption = "Personel İstatistikleri";
+            this.BtnPersonelIstatistik.Id = 8;
+            this.BtnPersonelIstatistik.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
+            this.BtnPersonelIstatistik.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
+            this.BtnPersonelIstatistik.Name = "BtnPersonelIstatistik";
+            this.BtnPersonelIstatistik.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPersonelIstatistik_ItemClick);
             // 
             // barButtonItem9
             // 
@@ -377,7 +378,7 @@
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup5.ItemLinks.Add(this.BtnPersonelIstatistik);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // ribbonPage4
@@ -469,7 +470,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 513);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -500,7 +501,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem BtnPersonelListesi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem BtnPersonelIstatistik;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;

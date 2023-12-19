@@ -72,5 +72,39 @@ namespace is_takip_proje.Formlar
         {
             Personeller();
         }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            var x = int.Parse(TxtID.Text);
+            var deger = db.TblPersonel.Find(x);
+            deger.Durum = false;
+            db.SaveChanges();
+            XtraMessageBox.Show("Personel silme işlemi başarıyla tamamlandı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Personeller();
+
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            TxtID.Text = gridView1.GetFocusedRowCellValue("ID").ToString();
+            TxtAd.Text = gridView1.GetFocusedRowCellValue("Ad").ToString();
+            TxtSoyad.Text = gridView1.GetFocusedRowCellValue("Soyad").ToString();
+            TxtMail.Text = gridView1.GetFocusedRowCellValue("Mail").ToString();
+            lookUpEdit1.Text = gridView1.GetFocusedRowCellValue("Departman").ToString();
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            int x = int.Parse(TxtID.Text);
+            var deger = db.TblPersonel.Find(x);
+            deger.Ad = TxtAd.Text;
+            deger.Soyad = TxtSoyad.Text;
+            deger.Mail = TxtMail.Text;
+            deger.Gorsel = TxtGorsel.Text;
+            deger.Departman = int.Parse(lookUpEdit1.EditValue.ToString());
+            db.SaveChanges();
+            XtraMessageBox.Show("Personel güncelleme işlemi başarıyla tamamlandı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Personeller();
+        }
     }
 }
